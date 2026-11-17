@@ -43,14 +43,10 @@ async def startup_event():
     logger.info(f"Model path: {settings.MODEL_PATH}")
     logger.info(f"Device: {settings.DEVICE}")
     
-    # Load disease classifier
-    try:
-        from app.models.disease_classifier import load_classifier
-        app.state.classifier = load_classifier(str(settings.MODEL_PATH))
-        logger.info("✓ Disease classifier loaded successfully")
-    except Exception as e:
-        logger.error(f"✗ Failed to load classifier: {e}")
-        app.state.classifier = None
+    # Don't load model at startup to save memory
+    # It will be loaded on first prediction request
+    app.state.classifier = None
+    logger.info("✓ Application started (model will load on demand)")
 
 
 @app.on_event("shutdown")
