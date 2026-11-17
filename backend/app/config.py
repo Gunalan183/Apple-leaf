@@ -26,7 +26,9 @@ class Settings(BaseSettings):
         "http://localhost:5173",  # Vite default
         "http://localhost:3000",  # React default
         "http://127.0.0.1:5173",
-        "http://127.0.0.1:3000"
+        "http://127.0.0.1:3000",
+        "https://*.hf.space",  # Hugging Face Spaces
+        "https://huggingface.co",  # Hugging Face main domain
     ]
     
     # Model Settings
