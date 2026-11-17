@@ -26,20 +26,12 @@ async def predict_disease(
     - Returns disease classification with confidence scores
     """
     
-    # Load classifier on demand if not already loaded
+    # Check if classifier is loaded
     if not hasattr(request.app.state, 'classifier') or request.app.state.classifier is None:
-        logger.info("Loading model on demand...")
-        try:
-            from app.models.disease_classifier import load_classifier
-            from app.config import settings
-            request.app.state.classifier = load_classifier(str(settings.MODEL_PATH))
-            logger.info("✓ Model loaded successfully")
-        except Exception as e:
-            logger.error(f"✗ Failed to load model: {e}")
-            raise HTTPException(
-                status_code=503,
-                detail=f"Model loading failed: {str(e)}. Please check if the model checkpoint exists."
-            )
+        raise HTTPException(
+            status_code=503,
+            detail="Model not loaded. Please ensure the trained model checkpoint exists."
+        )
     
     # Validate file type
     if not file.content_type.startswith('image/'):
