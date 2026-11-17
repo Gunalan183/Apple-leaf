@@ -1,0 +1,23 @@
+{
+  "total_original": 1210,
+  "total_generated": 2352,
+  "by_class": {
+    "scab": {
+      "original": 414,
+      "generated": 795,
+      "failed": 33
+    },
+    "rust": {
+      "original": 435,
+      "generated": 850,
+      "failed": 20
+    },
+    "healthy": {
+      "original": 361,
+      "generated": 707,
+      "failed": 15
+    }
+  },
+  "failed_validation": 68,
+  "generation_time": 0
+}

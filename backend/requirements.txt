@@ -1,0 +1,29 @@
+# GAN-Sim-GAN Backend Requirements
+# FastAPI Framework
+fastapi>=0.100.0
+uvicorn[standard]>=0.23.0
+python-multipart>=0.0.6
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+
+# Image Processing
+Pillow>=10.0.0
+opencv-python>=4.8.0
+numpy>=1.24.0
+
+# Deep Learning
+torch>=2.10.0
+torchvision>=0.20.0
+
+# Machine Learning Utilities
+scikit-learn>=1.5.0
+
+# Visualization
+matplotlib>=3.8.0
+seaborn>=0.13.0
+
+# Kaggle Dataset Download
+kagglehub==0.3.8
+
+# Utilities
+python-dotenv==1.0.1

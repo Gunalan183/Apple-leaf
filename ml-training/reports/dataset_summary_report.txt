@@ -1,0 +1,44 @@
+======================================================================
+GAN-SIM-GAN: APPLE LEAF DISEASE DATASET REPORT
+======================================================================
+
+DATASET SUMMARY
+----------------------------------------------------------------------
+Total Images: 1730
+Number of Classes: 3
+Classes: Scab, Rust, Healthy
+
+CONFIGURATION
+----------------------------------------------------------------------
+Train Ratio: 70%
+Validation Ratio: 15%
+Test Ratio: 15%
+Random Seed: 42
+
+SPLIT DISTRIBUTION
+----------------------------------------------------------------------
+
+TRAIN SET: 1210 images (69.9%)
+  Scab      :  414 images ( 34.2%)
+  Rust      :  435 images ( 36.0%)
+  Healthy   :  361 images ( 29.8%)
+
+VALIDATION SET: 258 images (14.9%)
+  Scab      :   88 images ( 34.1%)
+  Rust      :   93 images ( 36.0%)
+  Healthy   :   77 images ( 29.8%)
+
+TEST SET: 262 images (15.1%)
+  Scab      :   90 images ( 34.4%)
+  Rust      :   94 images ( 35.9%)
+  Healthy   :   78 images ( 29.8%)
+
+CLASS DISTRIBUTION ACROSS ALL SPLITS
+----------------------------------------------------------------------
+Scab      :  592 images ( 34.2%)
+Rust      :  622 images ( 36.0%)
+Healthy   :  516 images ( 29.8%)
+
+======================================================================
+Dataset prepared and ready for training!
+======================================================================
